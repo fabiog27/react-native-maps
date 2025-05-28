@@ -27,6 +27,7 @@ public interface RNMapsMarkerManagerInterface<T extends View> {
   void setIsPreselected(T view, boolean value);
   void setOpacity(T view, double value);
   void setPinColor(T view, @Nullable Integer value);
+  void setTracksViewChanges(T view, boolean value);
   void setTitleVisibility(T view, @Nullable String value);
   void setSubtitleVisibility(T view, @Nullable String value);
   void setUseLegacyPinView(T view, boolean value);

@@ -9,6 +9,7 @@
 
 package com.facebook.react.viewmanagers;
 
+import android.util.Log;
 import android.view.View;
 import androidx.annotation.Nullable;
 import com.facebook.react.bridge.ColorPropConverter;
@@ -24,6 +25,7 @@ public class RNMapsMarkerManagerDelegate<T extends View, U extends BaseViewManag
   }
   @Override
   public void setProperty(T view, String propName, @Nullable Object value) {
+    Log.d("RNMapsMarkerManager", "setProperty: " + propName + " = " + value);
     switch (propName) {
       case "anchor":
         mViewManager.setAnchor(view, (ReadableMap) value);
@@ -66,6 +68,9 @@ public class RNMapsMarkerManagerDelegate<T extends View, U extends BaseViewManag
         break;
       case "titleVisibility":
         mViewManager.setTitleVisibility(view, (String) value);
+        break;
+      case "tracksViewChanges":
+        mViewManager.setTracksViewChanges(view, value == null || (boolean) value);
         break;
       case "subtitleVisibility":
         mViewManager.setSubtitleVisibility(view, (String) value);

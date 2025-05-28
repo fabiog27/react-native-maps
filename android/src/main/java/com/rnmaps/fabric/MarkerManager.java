@@ -2,6 +2,7 @@ package com.rnmaps.fabric;
 
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -174,6 +175,12 @@ public class MarkerManager extends ViewGroupManager<MapMarker> implements RNMaps
     public void setDraggable(MapMarker view, boolean value) {
         view.setDraggable(value);
         view.setUpdated(true);
+    }
+
+    @Override
+    public void setTracksViewChanges(MapMarker view, boolean value) {
+        Log.d("MarkerManager", "setTracksViewChanges: " + value);
+        view.setTracksViewChanges(value);
     }
 
     @Override

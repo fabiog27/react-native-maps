@@ -156,6 +156,7 @@ RNMapsMarkerProps::RNMapsMarkerProps(
     coordinate(convertRawProp(context, rawProps, "coordinate", sourceProps.coordinate, {})),
     description(convertRawProp(context, rawProps, "description", sourceProps.description, {})),
     draggable(convertRawProp(context, rawProps, "draggable", sourceProps.draggable, {false})),
+    tracksViewChanges(convertRawProp(context, rawProps, "tracksViewChanges", sourceProps.tracksViewChanges, {true})),
     title(convertRawProp(context, rawProps, "title", sourceProps.title, {})),
     identifier(convertRawProp(context, rawProps, "identifier", sourceProps.identifier, {})),
     isPreselected(convertRawProp(context, rawProps, "isPreselected", sourceProps.isPreselected, {false})),
